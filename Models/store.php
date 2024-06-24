@@ -2,10 +2,10 @@
 
 class Movie
 {
-    public $title;
-    public $genre;
-    public $yearRelease;
-    public $nSerie;
+    // public $title;
+    // public $genre;
+    // public $yearRelease;
+    // public $nSerie;
     public $series;
     public function serie($nSerie)
     {
@@ -21,12 +21,17 @@ class Movie
             $this->series = 'prequel della serie';
         }
     }
-    public function __construct($title, $genre, $yearRelease, $nSerie)
+    // public function __construct($title, $genre, $yearRelease, $nSerie)
+    // {
+    //     $this->title = $title;
+    //     $this->genre = $genre;
+    //     $this->yearRelease = $yearRelease;
+    //     $this->nSerie = $nSerie;
+    //     $this->serie($nSerie);
+    // }
+
+    public function __construct(public $title, public $genre, public $yearRelease, public $nSerie)
     {
-        $this->title = $title;
-        $this->genre = $genre;
-        $this->yearRelease = $yearRelease;
-        $this->nSerie = $nSerie;
         $this->serie($nSerie);
     }
 }
